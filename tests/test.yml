@@ -12,7 +12,7 @@
             value: "OK"
     - role: ansible-role-crontab
     - role: ansible-role-crontab
-      crontabs: []
-
-
+      crontabs:
+        vars: []
+        jobs: []
 # vim:ft=ansible:
