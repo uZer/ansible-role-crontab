@@ -21,7 +21,7 @@ script:
   - "ansible-playbook -i tests/inventory tests/$SITE --connection=local --sudo"
 
   # Check if cleaning is working
-  - $([ $(wc -l /etc/cron.d/ansible_cron | awk '{ print $1 }') -eq 0 ])
+  - "$([ $(wc -l /etc/cron.d/ansible_cron | awk '{ print $1 }') -eq 0 ])"
 
   # Extra debug
   # - "sudo tail -n70 /var/log/syslog"
