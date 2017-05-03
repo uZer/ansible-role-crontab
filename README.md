@@ -1,5 +1,5 @@
-ansible-role-keepalived
-=======================
+ansible-role-crontab
+====================
 [![Build Status](https://travis-ci.org/uZer/ansible-role-crontab.svg?branch=master)](https://travis-ci.org/uZer/ansible-role-crontab)
 
 This role configures crontab an removes crons and vars when not defined.
@@ -9,17 +9,21 @@ Dependencies
 ------------
 None. Should work on any linux distribution
 
-Exhaustive usage example
-------------------------
+Light usage example
+-------------
 
 ```yaml
 crontabs:
-  vars: []
-  jobs: []
+  vars:
+    - name: "TESTVAR1"
+      value: "test VALUE 1"
+  jobs:
+    - name: "Test job 1"
+      job: "echo $TESTVAR1 > /tmp/testcron"
 ```
 
-Minimum usage example
----------------------
+Exhaustive usage example
+------------------------
 
 License
 -------
