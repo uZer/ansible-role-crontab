@@ -15,8 +15,10 @@ script:
   - chmod +x ${PWD}/tests/test.sh
 
   # Run tests without nodocker tags (ansible-galaxy --skip-tags nodocker)
-  # Run extra service tests defined in ./tests/service_tests.sh
-  - service_tests=true ${PWD}/tests/test.sh
+  - playbook=create.yml ${PWD}/tests/test.sh
+
+  # Run deletion and extra service tests defined in ./tests/service_tests.sh
+  - playbook=delete.yml service_tests=true ${PWD}/tests/test.sh
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/

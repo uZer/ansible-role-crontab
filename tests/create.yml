@@ -1,0 +1,6 @@
+---
+- name: Manage crontabs
+  hosts: all
+  roles:
+    - role: role_under_test
+# vim:ft=ansible:
