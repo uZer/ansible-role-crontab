@@ -1,6 +1,8 @@
 ansible-role-crontab
 ====================
-[![Build Status](https://travis-ci.org/uZer/ansible-role-crontab.svg?branch=master)](https://travis-ci.org/uZer/ansible-role-crontab)
+[![Build Status](https://img.shields.io/travis/uZer/ansible-role-crontab.svg?style=flat-square)](https://travis-ci.org/uZer/ansible-role-crontab)
+[![Galaxy](http://img.shields.io/badge/galaxy-uZer.crontab-blue.svg?style=flat-square)](https://galaxy.ansible.com/uZer/crontab/)
+[![GitHub Stars](https://img.shields.io/github/stars/uZer/ansible-role-crontab.svg?style=flat-square)](https://github.com/uZer/ansible-role-crontab)
 
 * This role configures crontab an removes crons/vars when they are not in ansible
 
