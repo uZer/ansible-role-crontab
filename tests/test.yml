@@ -1,17 +1,16 @@
 ---
-- name: Manage crontabs
-  hosts: localhost
-  remote_user: root
+- name: Manage crontabs, deploy multiple times
+  hosts: all
   roles:
-    - role: ansible-role-crontab
+    - role: role_under_test
       crontabs: []
-    - role: ansible-role-crontab
+    - role: role_under_test
       crontabs:
         env:
           - name: "Blank Test"
             value: "OK"
-    - role: ansible-role-crontab
-    - role: ansible-role-crontab
+    - role: role_under_test
+    - role: role_under_test
       crontabs:
         vars: []
         jobs: []
