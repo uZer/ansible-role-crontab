@@ -1,7 +1,14 @@
 ---
 # I could have just used the template module instead of the cron module, but
 # this path is an interesting exercice for future 'manage deletion' approach.
-- name: Create ansible cron.d file
+- name: Create /etc/cron.d folder
+  file:
+    path: /etc/cron.d
+    owner: root
+    group: root
+    mode: '0755'
+
+- name: Create /etc/cron.d/ansible_cron file
   file:
     path: /etc/cron.d/ansible_cron
     owner: root
