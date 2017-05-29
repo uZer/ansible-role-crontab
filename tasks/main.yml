@@ -4,6 +4,7 @@
 - name: Create /etc/cron.d folder
   file:
     path: /etc/cron.d
+    state: directory
     owner: root
     group: root
     mode: '0755'
@@ -11,6 +12,7 @@
 - name: Create /etc/cron.d/ansible_cron file
   file:
     path: /etc/cron.d/ansible_cron
+    state: file
     owner: root
     group: root
     mode: '0644'
