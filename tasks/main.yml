@@ -9,14 +9,6 @@
     group: root
     mode: '0755'
 
-- name: Create /etc/cron.d/ansible_cron file
-  file:
-    path: /etc/cron.d/ansible_cron
-    state: file
-    owner: root
-    group: root
-    mode: '0644'
-
 - name: List crontabs that ansible previously installed in managed cron file
   shell: >
     egrep '^#Ansible: ' /etc/cron.d/ansible_cron | cut -d ' ' -f2-
