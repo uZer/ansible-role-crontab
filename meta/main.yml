@@ -10,14 +10,15 @@ galaxy_info:
   platforms:
   - name: EL
     versions:
-    - 6
-    - 7
+      # - 6
+      - 7
   - name: Debian
     versions:
-    - all
+      - jessie
   - name: Ubuntu
     versions:
-    - all
+      - trusty
+      - xenial
   galaxy_tags:
     - crontab
     - deletion
